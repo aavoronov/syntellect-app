@@ -45,7 +45,6 @@ function App() {
           </div>
           <MobxControlledInput block={2} />
           <MobxControlledAutocomplete />
-          <MobxControlledBtn block={2} text='Search' callback='onSearch' />
         </>
       </BlockContainer>
     </div>

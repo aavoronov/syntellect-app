@@ -32,10 +32,6 @@ class ThirdBlockViewModel {
     this.debouncedGetHints(value);
   };
 
-  onSearch = () => {
-    this.getHints(this.inputValue);
-  };
-
   getHints = function* <T extends CountryInfo = CountryInfo>(this: ThirdBlockViewModel, value: string): Generator<T[]> {
     this.state = "pending";
     console.log("hints");
@@ -96,10 +92,6 @@ const viewModel = new ThirdBlockViewModel(getCountryByName);
 //     }
 //   }
 // );
-
-autorun(() => {
-  console.log("autorun1 " + viewModel.inputValue);
-});
 
 // autorun(() => {
 //   if (viewModel.inputValue && viewModel.finishedEditing) {
